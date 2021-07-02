@@ -1,34 +1,34 @@
 [color]
-  branch = auto
-  diff = auto
-  status = auto
+	branch = auto
+	diff = auto
+	status = auto
 
 [branch]
-  mergeoptions = --no-ff
-  autosetuprebase = always
-  rebase = true
+	mergeoptions = --no-ff
+	autosetuprebase = always
+	rebase = true
 
 [core]
-  excludesfile = ~/.gitignore_global/.gitignore_global
-  editor = vim
+	excludesfile = ~/.gitignore/.gitignore_global
+	editor = vim
 
 [push]
-  default = matching
+	default = matching
 
 [alias]
-  lol = log --graph --decorate --pretty=oneline --abbrev-commit
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-  ignored = ls-files --others -i --exclude-standard
-  st = status -sb
-  unstage = reset HEAD --
-  cur = rev-parse HEAD
-  chekcout = checkout
-  cp = cherry-pick
-  chainsaw = rebase --interactive @{upstream}
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ignored = ls-files --others -i --exclude-standard
+	st = status -sb
+	unstage = reset HEAD --
+	cur = rev-parse HEAD
+	chekcout = checkout
+	cp = cherry-pick
+	chainsaw = rebase --interactive @{upstream}
 
 [user]
-  name = Florian Kraft
-  email = florian.kraft@kloeckner.com
-  signingkey = 623ED883
-
-
+	name = Florian Kraft
+	email = schnuffifk@gmail.com
+	# signingkey = <Replace with your own>
+[commit]
+	# gpgsign = true
