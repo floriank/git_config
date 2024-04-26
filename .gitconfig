@@ -1,34 +1,46 @@
 [color]
-	branch = auto
-	diff = auto
-	status = auto
+  branch = auto
+  diff = auto
+  status = auto
 
 [branch]
-	mergeoptions = --no-ff
-	autosetuprebase = always
-	rebase = true
+  mergeoptions = --no-ff
+  autosetuprebase = always
+  rebase = true
 
 [core]
-	excludesfile = ~/.gitignore/.gitignore_global
-	editor = vim
+  excludesfile = ~/.gitignore_global/.gitignore_global
+  editor = vim
 
 [push]
-	default = matching
+  default = simple
 
 [alias]
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	ignored = ls-files --others -i --exclude-standard
-	st = status -sb
-	unstage = reset HEAD --
-	cur = rev-parse HEAD
-	chekcout = checkout
-	cp = cherry-pick
-	chainsaw = rebase --interactive @{upstream}
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ignored = ls-files --others -i --exclude-standard
+  st = status -sb
+  unstage = reset HEAD --
+  cur = rev-parse HEAD
+  chekcout = checkout
+  cp = cherry-pick
+  chainsaw = rebase --interactive @{upstream}
+  jira-start = "!f() { git checkout -b `branch_name $1`; jira in-progress $1; }; f"
 
-[user]
-	name = Florian Kraft
-	email = schnuffifk@gmail.com
-	# signingkey = <Replace with your own>
+[include] 
+    path = ~/.gituser
+
+[hub]
+  protocol = git
 [commit]
-	# gpgsign = true
+  gpgsign = true
+[gpg]
+  program = gpg2
+[init]
+	defaultBranch = main
+[merge]
+	conflictstyle = diff3
+[url "ssh://git@github.com"]
+	insteadof = https://github.com
+[rerere]
+	enabled = true
