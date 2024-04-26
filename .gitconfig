@@ -44,3 +44,5 @@
 	insteadof = https://github.com
 [rerere]
 	enabled = true
+[maintenance]
+	repo = /home/florian/code/gatekeeper
